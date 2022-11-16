@@ -3,8 +3,9 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
-        Car lada = new Car("Lada", "Granta", 2015, "России", "желтого",250, 1.7f,
-                "автомат", "универсал", "А125ДЛ564", "5", "зимняя",
+        Car lada = new Car("Lada", "Granta", 2015, "России", "желтого",250,
+                1.7f,"автомат", "универсал", "А125ДЛ564", "5",
+                "зимняя",
                 new Car.Key(true, true),
                 new Car.Insurance(LocalDate.now().plusMonths(5), 2500.0f, "456789321"));
         System.out.println(lada);
@@ -39,5 +40,20 @@ public class Main {
                 new Car.Insurance(LocalDate.now().plusMonths(5), 2500.0f, "456789325"));
 
 
+        Train lastochka = new Train("Ласточка", "В-901", 2011, "России", "Синий", 301,
+                3500, "6", "Белорусского вокзала", "Минск-Пассажирский", 11);
+
+        Train leningrad = new Train("Ленинград", "D-125", 2019, "России", "Красный",
+                270,1700, "1", "Ленинградского вокзала",
+                "станции Ленинград-Пассажирский", 8);
+        System.out.println(lastochka);
+        System.out.println(leningrad);
+
+        Bus liaz = new Bus("ЛиАЗ", "4292", 2015, "России", "белого", 120);
+        Bus paz = new Bus("ПАЗ", "325", 2018, "России", "белого",150);
+        Bus maz = new Bus("МАЗ", "232", 2020, "России", "белого",150);
+        System.out.println(liaz);
+        System.out.println(paz);
+        System.out.println(maz);
     }
 }

@@ -4,7 +4,7 @@ public class Transport {
     public final int year;               //год производства
     public final String country;        //производитель
     public String color;
-    public int maxSpeed;           //максскорость
+    public int maxSpeed;           //макс скорость
 
     public Transport(String brand, String model, int year, String country, String color, int maxSpeed) {
         this.brand = Tasks.validOrDefault(brand,"default");
@@ -36,7 +36,7 @@ public class Transport {
     }
 
     public void setColor(String color) {
-        this.color = Tasks.validOrDefault(country,"default");
+        this.color = Tasks.validOrDefault(color,"default");
     }
 
     public int getMaxSpeed() {
@@ -44,6 +44,6 @@ public class Transport {
     }
 
     public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = Tasks.check(year, 200);
+        this.maxSpeed = Tasks.check(maxSpeed, 200);
     }
 }
