@@ -58,9 +58,6 @@ public class Car extends Transport{
         }
 
         private Float engineVolume;    //объем двигателя
-
-
-
         private String transmission;       //коробка передач
         private final String bodyType;              //Тип кузова          не изменяется
         private String registrationNumber;        //Регистрационный номер
@@ -71,8 +68,8 @@ public class Car extends Transport{
 
         public Car(String brand, String model, int year, String country, String color, int maxSpeed, Float engineVolume,
                    String transmission, String bodyType, String registrationNumber, String numberSeats,
-                   String tires, Key key, Insurance insurance) {
-            super(brand, model, year, country, color, maxSpeed);
+                   String tires, Key key, Insurance insurance, String fuel) {
+            super(brand, model, year, country, color, maxSpeed, fuel);
             setEngineVolume(engineVolume);
             this.bodyType = Tasks.validOrDefault(bodyType, "default");
             this.numberSeats = Tasks.validOrDefault(numberSeats, "default");
@@ -165,7 +162,12 @@ public class Car extends Transport{
             return insurance;
         }
 
-        @Override
+    @Override
+    public void refill() {
+        System.out.println("Заправлять - " + fuel);
+    }
+
+    @Override
         public String toString() {
             System.out.println(key);
             System.out.println(insurance);

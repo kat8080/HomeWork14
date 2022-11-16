@@ -8,8 +8,8 @@ public class Train extends Transport{
     private int quantityWagons;           //Количество вагонов
 
     public Train(String brand, String model, int year, String country, String color, int maxSpeed,
-                 int priceTrip, String travelTime, String startStation, String lastStation, int quantityWagons) {
-        super(brand, model, year, country, color, maxSpeed);
+                 int priceTrip, String travelTime, String startStation, String lastStation, int quantityWagons, String fuel) {
+        super(brand, model, year, country, color, maxSpeed, fuel);
         setPriceTrip(priceTrip);
         setTravelTime(travelTime);
         setStartStation(startStation);
@@ -65,5 +65,10 @@ public class Train extends Transport{
                 " ч., в поезде " + quantityWagons + " вагонов.";
         //(String brand, String model, int year, String country, String color, int maxSpeed,
         //                 int priceTrip, String travelTime, String startStation, String lastStation, int quantityWagons)
+    }
+
+    @Override
+    public void refill() {
+        System.out.println("Заправлять - " + fuel);
     }
 }
