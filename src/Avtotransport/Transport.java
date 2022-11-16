@@ -1,3 +1,7 @@
+package Avtotransport;
+
+import Avtotransport.Tasks;
+
 public abstract class Transport {
     public final String brand;         //марка
     public final String model;

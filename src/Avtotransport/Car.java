@@ -1,6 +1,8 @@
+package Avtotransport;
+
 import java.time.LocalDate;
 
-public class Car extends Transport{
+public class Car extends Transport {
 
         public static class Key {          //вложенный класс Ключ
             private final boolean remoteEngineStart;  //Удаленный запуск двигателя

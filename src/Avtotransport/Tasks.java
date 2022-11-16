@@ -1,3 +1,5 @@
+package Avtotransport;
+
 public class Tasks {
     public static String validOrDefault(String value, String defoltValue) {
         if (value == null || value.isBlank()) {

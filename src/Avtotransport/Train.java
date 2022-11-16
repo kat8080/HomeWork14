@@ -1,6 +1,8 @@
-import java.time.LocalTime;
+package Avtotransport;
 
-public class Train extends Transport{
+import Avtotransport.Tasks;
+
+public class Train extends Transport {
     private int priceTrip;            //Цена поездки
     private String travelTime;           //Время поездки
     private String startStation;         //Название станции отбытия
